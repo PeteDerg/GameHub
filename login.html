@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hub - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <header>
+        <div id="brand">
+            <img src="logo.png" alt="Game Hub Logo" id="logo">
+            <h1>Game Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="forum.html">Forum</a></li>
+
+            </ul>
+            <a href="login.html" id="loginButton" class="button" class="active">Login</a>
+        </nav>
+    </header>
+    <div class="login-container">
+       <form action="login.html" method="post" class="login-form">
+            <h2>Login</h2>
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="button" class="login-button" id="loginSubmitButton">Login</button>
+            <div class="links">
+             <p>Don't Have account?</p> <a href="register.html">Sign Up Now</a>
+            </div>
+        </form>
+    </div>
+    <!-- Footer -->
+    <footer>
+       
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" class="social-icon"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/" class="social-icon"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" class="social-icon"><i class="fa fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Game Hub. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var loginButton = document.getElementById('loginSubmitButton');
+            
+            loginButton.addEventListener('click', function() {
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+    
+                if(username && password) {
+                    alert('Hello ' + username + '! I am working on the login feature and will implement it in the future updates!');
+                } else {
+                    alert('Please enter your username and password.');
+                }
+            });
+        });
+    </script>    
+</body>
+</html>

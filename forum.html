@@ -1,0 +1,147 @@
+<?php
+session_start();
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hub - Forum</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div id="brand">
+            <img src="logo.png" alt="Game Hub Logo" id="logo">
+            <h1>Game Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="active"><a href="forum.html">Forum</a></li>
+            </ul>
+            <a href="login.html" id="loginButton" class="button">Login</a>
+        </nav>
+    </header>
+    <h1 class="goty">Leave a Review</h1>
+    <main class="forum-container">
+        <div class="game-poster">
+            <img src="er.jpg" alt="Elden Ring Poster" class="game-poster-image" />
+        </div>
+        <div class="game-details">
+            <h2 class="game-title">ELDEN RING</h2>
+            <p class="game-description">
+                <strong>Genre: </strong>Action role-playing <br>
+                <strong>Release Date:</strong> February 25, 2022 <br>
+                <strong>Platforms:</strong> PlayStation 5, PlayStation 4, Xbox One, Xbox Series X and Series S, Microsoft Windows <br>
+                <br>An action role-playing game developed by FromSoftware. Directed by Hidetaka Miyazaki with worldbuilding by fantasy writer George R. R. Martin. Elden Ring has been awarded and nominated for Game of the Year, among other accolades.
+                </p>
+            <div class="star-rating">
+                <span class="fa fa-star" id="star1" onclick="setRating(1)"></span>
+                <span class="fa fa-star" id="star2" onclick="setRating(2)"></span>
+                <span class="fa fa-star" id="star3" onclick="setRating(3)"></span>
+                <span class="fa fa-star" id="star4" onclick="setRating(4)"></span>
+                <span class="fa fa-star" id="star5" onclick="setRating(5)"></span>            
+            </div>
+            <textarea class="review-textarea" placeholder="Write your review here..."></textarea>
+            <button class="submit-review">Submit Review</button>
+        </div>
+    </main>
+    <main class="forum-container">
+        <div class="game-poster">
+            <img src="tw3.jpg" alt="The Witcher 3: Wild Hunt Poster" class="game-poster-image" />
+        </div>
+        <div class="game-details">
+            <h2 class="game-title">The Witcher 3: Wild Hunt</h2>
+            <p class="game-description">
+                <strong>Genre:</strong> Action role-playing <br>
+                <strong>Release Date:</strong> May 19, 2015 <br>
+                <strong>Platforms:</strong> PlayStation 4, PlayStation 5, Xbox One, Xbox Series X and Series S, Nintendo Switch, Microsoft Windows <br>
+                <br>An open-world action RPG developed by CD Projekt Red, based on the fantasy novel series by Andrzej Sapkowski. Players control Geralt of Rivia, a monster slayer known as a Witcher, seeking his adopted daughter in a vast medieval fantasy world.
+            </p>
+            <div class="star-rating">
+                <span class="fa fa-star" id="star1" onclick="setRating(1)"></span>
+                <span class="fa fa-star" id="star2" onclick="setRating(2)"></span>
+                <span class="fa fa-star" id="star3" onclick="setRating(3)"></span>
+                <span class="fa fa-star" id="star4" onclick="setRating(4)"></span>
+                <span class="fa fa-star" id="star5" onclick="setRating(5)"></span>            
+            </div>
+            <textarea class="review-textarea" placeholder="Write your review here..."></textarea>
+            <button class="submit-review">Submit Review</button>
+        </div>
+    </main>
+    <main class="forum-container">
+        <div class="game-poster">
+            <img src="mc.jpg" alt="Minecraft Poster" class="game-poster-image" />
+        </div>
+        <div class="game-details">
+            <h2 class="game-title">Minecraft</h2>
+            <p class="game-description">
+                <strong>Genre:</strong> Sandbox, Survival <br>
+                <strong>Release Date:</strong> November 18, 2011 <br>
+                <strong>Platforms:</strong> PC, Mac, PlayStation 3, PlayStation 4, PlayStation 5, Xbox 360, Xbox One, Xbox Series X and Series S, Nintendo Switch, iOS, Android, Windows Phone and more. <br>
+                <br>A sandbox game developed by Mojang Studios. Players explore a blocky, procedurally-generated 3D world with virtually infinite terrain, and may discover and extract raw materials, craft tools, build structures or earthworks, and depending on game mode, can fight computer-controlled "mobs", as well as cooperate with or compete against other players in the same world.
+            </p>            
+            <div class="star-rating">
+                <span class="fa fa-star" id="star1" onclick="setRating(1)"></span>
+                <span class="fa fa-star" id="star2" onclick="setRating(2)"></span>
+                <span class="fa fa-star" id="star3" onclick="setRating(3)"></span>
+                <span class="fa fa-star" id="star4" onclick="setRating(4)"></span>
+                <span class="fa fa-star" id="star5" onclick="setRating(5)"></span>            
+            </div>
+            <textarea class="review-textarea" placeholder="Write your review here..."></textarea>
+            <button class="submit-review">Submit Review</button>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+       
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" class="social-icon"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/" class="social-icon"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" class="social-icon"><i class="fa fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Game Hub. All rights reserved.</p>
+    </footer>
+    <script>
+        function setRating(starIndex, containerIndex) {
+            var ratingContainers = document.querySelectorAll('.star-rating');
+            var container = ratingContainers[containerIndex];
+            var stars = container.querySelectorAll('.fa');
+
+            stars.forEach((star, index) => {
+                star.classList.toggle('checked', index < starIndex);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.star-rating .fa').forEach((star, index) => {
+                var containerIndex = Array.from(document.querySelectorAll('.game-details')).findIndex(details => details.contains(star));
+                var starIndex = index % 5 + 1;
+                star.addEventListener('click', () => setRating(starIndex, containerIndex));
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var reviewButtons = document.querySelectorAll('.submit-review');
+            reviewButtons.forEach(function(button) {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault(); 
+                    alert('Thank you for submitting your review!');
+                });
+            });
+        });
+
+
+    </script>
+</body>
+</html>

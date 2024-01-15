@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Hub - Games</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Verdana, sans-serif; margin: 0;   height: 100%;}
+    .mySlides { display: none; }
+    img { vertical-align: middle; }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* Numbertext and dots */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #1fbfd2;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active, .dot:hover {
+  background-color: #0a8d9d;
+  }
+
+  /* Fading animation */
+  .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+  from { opacity: .4 }
+  to { opacity: 1 }
+  }
+
+  /* Game description styles */
+  .game-description {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: left;
+  border-radius: 5px;
+  margin: 10px 0;
+  }
+
+  .game-description h3 {
+  color: #1fbfd2;
+  margin-bottom: 10px;
+  }
+
+  .game-description p {
+  font-size: 14px;
+  line-height: 1.6;
+  }
+
+  /* Games container and individual game styles */
+  #games-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; 
+  margin-bottom: 20px;
+  clear: both;
+  padding-left: 10%; 
+  }
+
+  #games-container .game {
+  position: relative;
+  text-align: center; 
+  margin: 1%;
+  }
+
+  #games-container .game a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  }
+
+  /* Style for the buttons and icons */
+  button {
+  margin: 5px;
+  margin-left: 15%;
+  width: 250px;
+  padding: 15px 30px; 
+  font-size: 1.2em;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #1fbfd2;
+  text-align: center; 
+  }
+
+  /* Icon styles */
+  .icon {
+  display: inline-block;
+  width: 40px; 
+  height: 40px; 
+  background-size: cover;
+  margin-right: 8px;
+  }
+
+  .pc-icon { background-image: url('pc.png'); }
+  .playstation-icon { background-image: url('ps.png'); }
+  .nintendo-icon { background-image: url('ns.png'); }
+
+  /* Image styling within the game elements */
+  .game img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 8px; 
+  }
+
+  /* Text below the game image */
+  .game-name {
+  display: block;
+  font-size: 1em; 
+  color: white; 
+  text-decoration: none;
+  }
+
+  /* Clearfix for floated elements within the games container */
+  #games-container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Buttons container */
+  .buttons-container {
+    text-align: center; 
+    margin-bottom: 20px; 
+  }
+  </style>
+</head>
+<body>
+  <header>
+      <div id="brand">
+          <img src="logo.png" alt="Game Hub Logo" id="logo">
+          <h1>Game Hub</h1>
+      </div>
+      <nav>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="games.html">Games</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="forum.html">Forum</a></li>
+          </ul>
+          <a href="login.html" id="loginButton" class="button">Login</a>
+      </nav>
+  </header>
+  <div class="wrapper">
+    <h1 class="goty">Popular Games</h1>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 4</div>
+        <img src="pubg.jpg" style="width:100%">
+        <div class="game-description">
+            <h3>PlayerUnknown's Battlegrounds (PUBG)</h3>
+            <p>Genre: Battle Royale<br>
+            Release Date: December 20, 2017<br>
+            Platforms: PC, Xbox One, PS4, Mobile<br>
+            A battle royale shooter that pits 100 players against each other in a struggle for survival. Gather supplies and outwit your opponents to become the last person standing.</p>
+        </div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="cs2.jpg" style="width:100%">
+            <div class="game-description">
+                <h3>Counter-Strike: Global Offensive (CS:GO)</h3>
+                <p>Genre: First-Person Shooter<br>
+                Release Date: August 21, 2012<br>
+                Platforms: PC, PS3, Xbox 360<br>
+                CS:GO features new maps, characters, and weapons and delivers updated versions of the classic CS content.</p>
+            </div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="dota2.jpg" style="width:100%">
+            <div class="game-description">
+                <h3>DOTA 2</h3>
+                <p>Genre: MOBA<br>
+                Release Date: July 9, 2013<br>
+                Platforms: PC<br>
+                DOTA 2 is a competitive game of action and strategy, played both professionally and casually by millions of passionate fans worldwide.</p>
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="gta.jpg" style="width:100%">
+            <div class="game-description">
+                <h3>Grand Theft Auto V (GTA 5)</h3>
+                <p>Genre: Action-Adventure<br>
+                Release Date: September 17, 2013<br>
+                Platforms: PC, PS4, PS3, Xbox One, Xbox 360<br>
+                Explore the stunning world of Los Santos and Blaine County in the ultimate Grand Theft Auto V experience, featuring a range of technical upgrades and enhancements for new and returning players.</p>
+            </div>
+        </div>
+    
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+    <h1 class="goty">The Best Exclusive Games For Different Platforms</h1>
+    <!-- Buttons with a span for the icon -->
+    <button id="btn-PC"><span class="icon pc-icon"></span>PC</button>
+    <button id="btn-PlayStation"><span class="icon playstation-icon"></span>PlayStation</button>
+    <button id="btn-Nintendo"><span class="icon nintendo-icon"></span>Nintendo</button>
+
+    <!-- Container for the game posters -->
+    <div id="games-container"></div>
+  </div>
+
+  <!-- Footer -->
+  <div class="push"></div>
+  <footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/" class="social-icon"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/" class="social-icon"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/" class="social-icon"><i class="fa fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2024 Game Hub. All rights reserved.</p>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+      }
+
+      const platforms = {
+        'PC': [
+          { name: 'Euro Truck Simulator 2', url: 'https://store.steampowered.com/app/227300/Euro_Truck_Simulator_2/', img: 'et2.jpg' },
+          { name: 'Valheim', url: 'https://store.steampowered.com/app/892970/Valheim/', img: 'valh.jpg' },
+          { name: 'Factorio', url: 'https://store.steampowered.com/app/427520/Factorio/', img: 'fac.jpg' }
+        ],
+        'PlayStation': [
+          { name: 'Ghost of Tsushima', url: 'https://en.wikipedia.org/wiki/Ghost_of_Tsushima', img: 'got.jpg' },
+          { name: 'Bloodborne', url: 'https://en.wikipedia.org/wiki/Bloodborne', img: 'bb.jpg' },
+          { name: 'God of War Ragnarök', url: 'https://en.wikipedia.org/wiki/God_of_War_Ragnar%C3%B6k', img: 'gowr.jpg' }
+        ],
+        'Nintendo': [
+          { name: 'Animal Crossing: New Horizons', url: 'https://animalcrossing.nintendo.com/new-horizons/', img: 'ac.jpg' },
+          { name: 'Splatoon 2', url: 'https://www.nintendo.com/us/store/products/splatoon-2-switch/', img: 's2.jpg' },
+          { name: 'The Legend of Zelda: Tears of the Kingdom', url: 'https://zelda.nintendo.com/tears-of-the-kingdom/', img: 'tloz.jpg' }
+        ]
+      };
+      function showGamesForPlatform(platform) {
+        const games = platforms[platform];
+        const gamesContainer = document.getElementById('games-container');
+        gamesContainer.innerHTML = '';
+
+        games.forEach(game => {
+          const gameElement = document.createElement('div');
+          gameElement.classList.add('game');
+
+          const gameLink = document.createElement('a');
+          gameLink.href = game.url;
+          gameLink.target = '_blank';
+
+          const gameImage = document.createElement('img');
+          gameImage.src = game.img;
+          gameImage.alt = game.name;
+          gameImage.style.width= '100%'; 
+          
+          gameLink.appendChild(gameImage); 
+          gameElement.appendChild(gameLink); 
+          gamesContainer.appendChild(gameElement); 
+        });
+      }
+
+
+
+      document.getElementById('btn-PC').addEventListener('click', () => showGamesForPlatform('PC'));
+      document.getElementById('btn-PlayStation').addEventListener('click', () => showGamesForPlatform('PlayStation'));
+      document.getElementById('btn-Nintendo').addEventListener('click', () => showGamesForPlatform('Nintendo'));
+
+    </script>    
+  </footer>
+</body>
+</html>

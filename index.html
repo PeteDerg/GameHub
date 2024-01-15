@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hub - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div id="brand">
+            <img src="logo.png" alt="Game Hub Logo" id="logo">
+            <h1>Game Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="forum.html">Forum</a></li>
+            </ul>
+            <a href="login.html" id="loginButton" class="button">Login</a>
+        </nav>
+    </header>
+    <!-- Featured Content Slider -->
+    <h1 class="goty">Games Of The Year</h1>
+    <div id="featured-slider">
+        <!-- Slide 1 -->
+        <div class="slide">
+            <div class="slide-content">
+                <img src="game1.jpg" alt="Game 1" class="slide-image" >
+                <div class="description">
+                    <h3>Baldur's Gate 3</h3>
+                    <p>Baldur's Gate 3 is a role-playing video game with single-player and cooperative multiplayer elements. Players can create one or more characters and form a party along with a number of pre-generated characters to explore the game's story.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide">
+            <div class="slide-content">
+                <img src="game2.jpeg" alt="Game 2" class="slide-image">
+                <div class="description">
+                    <h3>Spider-Man 2</h3>
+                    <p>Marvel's Spider-Man 2 is a single player game. But you can play as both Peter Parker and Miles Morales, switching between the heroic Spider-Men on your crime-fighting adventures to experience their individual gameplay abilities and story elements.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <div class="slide-content">
+                <img src="game3.jpg" alt="Game 3" class="slide-image" >
+                <div class="description">
+                    <h3>Alan Wake 2</h3>
+                    <p>Alan Wake 2 picks up 13 years after the original. Alan, having saved his wife at the end of the first game, remains trapped in the Dark Place, a nightmare world with the power to turn fiction into reality.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Latest News Section -->
+    <section id="latest-news">
+    <h1>Latest News:</h1>
+        <div class="news-item">
+            <!-- YouTube Video -->
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/J9oVQ43j22g" title="The First Time Somebody Has Ever 'Beat' Tetris" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="news-text">
+                <h3>Tetris: How a US teenager achieved the 'impossible' and what his feat tells us about human capabilities</h3>
+                <p>The original Tetris designers thought it couldn't be done – the game is designed to play endlessly. The pieces fall faster and faster until a player is overwhelmed. To beat the game, a player has to achieve scores so high that the game's memory banks overload and it crashes. Victory is achieved because the computer simply cannot continue.</p>
+                <a href="https://www.bbc.com/future/article/20240103-tetris-how-a-us-teenager-achieved-the-impossible#:~:text=In%20the%20dying%20days%20of,is%20designed%20to%20play%20endlessly." class="news-link">Read More</a>
+            </div>
+        </div>
+        <div class="news-item">
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/Zu2z5M4gmno" title="THE GAME AWARDS 2023: Official 4K Livestream (Monster Hunter, Marvel&#39;s Blade, Light No Fire)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="news-text">
+                <h3>The Game Awards 2023: all of the biggest trailers and announcements</h3>
+                <p>It’s early December, and that means it’s time for The Game Awards, the annual Geoff Keighley-hosted video game news and awards extravaganza. Baldur’s Gate 3 was crowned as game of the year (and shadow dropped on Xbox), but before we got there, viewers were subjected to a whole lot of video game news.
+
+                </p>
+                <a href="https://www.theverge.com/23981532/the-game-awards-2023-biggest-news-trailers-announcements" class="news-link">Read More</a>
+            </div>
+        </div>
+        <button id="loadMoreNews" onclick="loadMoreNews()">Load More</button>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+       
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" class="social-icon"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/" class="social-icon"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" class="social-icon"><i class="fa fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Game Hub. All rights reserved.</p>
+    </footer>
+    <script>
+        function loadMoreNews() {
+            var newsSection = document.getElementById('latest-news');
+            newsSection.innerHTML += `
+                <div class="news-item">
+                    <iframe width="600" height="400" src="https://www.youtube.com/embed/UvmmWeov68s" title="DualSense Edge - Features Trailer | PS5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="news-text">
+                        <h3>Upgraded PS5 DualSense Controller Spotted Online</h3>
+                        <p>An upgraded version of the innovative PS5 DualSense controller has appeared online, raising excitement for its greatly improved battery life in particular. </p>
+                        <a href="https://gamerant.com/upgraded-ps5-dualsense-controller-v2-leak/" class="news-link">Read More</a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <iframe width="600" height="400" src="https://www.youtube.com/embed/QdBZY2fkU-0" title="Grand Theft Auto VI Trailer 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="news-text">
+                        <h3>GTA 6 alleged release date appears online, is much sooner than we'd expected</h3>
+                        <p>Despite there being some great games set to release this year, gamers across all platforms are seeing 2024 as a filler year before GTA VI releases in 2025. The first official trailer for the game was released in December, earlier than planned due to a leak, and fans are already going wild for a second trailer.</p>
+                        <a href="https://www.gamingbible.com/news/platform/gta-6-alleged-release-date-appears-online-022211-20240109" class="news-link">Read More</a>
+                    </div>
+                </div>
+            `;
+            var loadMoreButton = document.getElementById('loadMoreNews');
+            loadMoreButton.remove();
+        }
+
+    </script>
+</body>
+</html>

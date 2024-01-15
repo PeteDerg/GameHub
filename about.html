@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us -    Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <header>
+        <div id="brand">
+            <img src="logo.png" alt="Game Hub Logo" id="logo">
+            <h1>Game Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li ><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li class="active"><a href="about.html">About</a></li>
+                <li><a href="forum.html">Forum</a></li>
+            </ul>
+            <a href="login.html" id="loginButton" class="button">Login</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="image-container">
+                <img src="aboutus.jpg" alt="Your Image Description">
+            </div>
+            <div class="text-container">
+                <h1>Welcome to Game Hub</h1>
+                <p>Hi, I'm <strong>Petr Dergachev</strong>, the sole developer behind Game Hub. My passion for gaming and technology has driven me to create this platform.</p>
+                <h2>My Mission</h2>
+                <p>My mission is to connect gamers all over the world, creating a community where everyone can share their experiences, strategies, and excitement for gaming. At Game Hub, I believe in breaking down barriers and building a space where all gamers, regardless of skill level or background, can come together.</p>
+                <h3>What We Offer</h3>
+                <p>Game Hub offers a variety of features, including:</p>
+                <ul>
+                    <li>Latest game reviews and news</li>
+                    <li>Community forums for discussions and tips</li>
+                    <li>Exclusive interviews with game developers</li>
+                    <li>Monthly gaming tournaments and events</li>
+                </ul>
+                <p>Stay tuned for more exciting features and updates as we continue to grow and evolve!</p>
+            </div>
+        </div>
+
+        <section id="map-section">
+            <h2>Our Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6277.140174908409!2d103.86644862501208!3d1.3261869821130494!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1113ff20b32b%3A0x9a2fde1adad2331!2sJui%20Residences!5e0!3m2!1sen!2sid!4v1704378684807!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+       
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" class="social-icon"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/" class="social-icon"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" class="social-icon"><i class="fa fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Game Hub. All rights reserved.</p>
+    </footer>
+    <script>
+        function initMap() {
+            var location = { lat: -34.397, lng: 150.644 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+</body>
+</html>
